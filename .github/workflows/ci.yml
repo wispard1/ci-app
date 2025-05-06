@@ -18,3 +18,8 @@ jobs:
         run: make test
       - name: Run linter
         run: make lint
+      - name: Checkout
+        uses: actions/checkout@v4
+        id: checkout
+      - name: Print Hello from Hexlet
+        uses: hexlet-components/hello-from-hexlet-action@release
