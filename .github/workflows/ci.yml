@@ -1,18 +1,14 @@
 name: CI Pipeline
 on: push
 jobs:
-  build: 
+  build:
     runs-on: ubuntu-latest
-
-    steps:  
+    steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Setup project
         run: make setup
-
       - name: Run tests
         run: make test
-
       - name: Run linter
         run: make lint
